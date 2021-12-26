@@ -1,6 +1,6 @@
 /**
  * DeviceFeedback cordova plugin
- * @author Jan Velecký aka Velda
+ * @author Jan VeleckÃ½ aka Velda
  * 
  * Obejct bellow is exported into window.plugins.deviceFeedback
  */
@@ -35,9 +35,6 @@ var self = module.exports = {
 	haptic: function(type) {
 		// set default value when argument is omitted
 		if(type == undefined) type = self.VIRTUAL_KEY
-		// validate type argument
-		else if(type !== self.VIRTUAL_KEY && type !== self.LONG_PRESS && type !== self.KEYBOARD_TAP)
-			throw "Argument must be equal to one of these constants: LONG_PRESS, VIRTUAL_KEY, KEYBOARD_TAP."
 		
 		cordova.exec(
 			function() {},
